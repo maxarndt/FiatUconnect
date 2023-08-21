@@ -1,15 +1,15 @@
-name: "FiatUconnect"
-url: "https://github.com/AirBeeSee/FiatUconnect"
+name: "FiatUconnect (Development)"
+url: "https://github.com/maxarndt/FiatUconnect"
 description: "Connect your FIAT (uconnect) car to Home Assistant. 🚗"
 services:
-    - "mqtt:want"
-version: "12.0.1"
+  - "mqtt:want"
+version: "13.0.0"
 homeassistant_api: true
-image: "ghcr.io/airbeesee/image-{arch}-fiat-uconnect"
-slug: "fiat_uconnect"
+image: "ghcr.io/maxarndt/image-{arch}-fiat-uconnect"
+slug: "fiat_uconnect_dev"
 init: false
-discovery: 
-    - "mqtt"
+discovery:
+  - "mqtt"
 options:
   FiatUser: ""
   FiatPw: ""
@@ -17,7 +17,7 @@ options:
 
   Brand: "Fiat"
   Region: "Europe"
-  
+
   RefreshInterval: 2
   Debug: false
   AutoDeepRefresh: false
@@ -31,7 +31,7 @@ schema:
 
   Brand: list(Fiat|AlfaRomeo|Jeep|Debug)
   Region: list(Europe|US)
-  
+
   RefreshInterval: int
   Debug: bool
   AutoDeepRefresh: bool
@@ -39,5 +39,4 @@ schema:
   StartDelaySeconds: int?
 arch:
   - amd64
-  - armv7  
-
+  - armv7
